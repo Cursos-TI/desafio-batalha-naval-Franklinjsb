@@ -48,7 +48,7 @@ int main() {
         for (int i = 0; i < 10; i++) {
             printf("%2d ",coluna_2);
             for (int j = 0; j < 10; j++) {
-                if (i==j&& i<5 || i==j && i>6)
+                if (i==j&& i<5 || i==j && i>5|| i==5 && j<4|| i<4 && j==8)
                 {
                     tabuleiro_aventureiro[i][j] = 3;
                 }
