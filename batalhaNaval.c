@@ -12,7 +12,8 @@ int main() {
     int tabuleiro[5][5];
     char linha_índice[5]={'A','B','C','D','E'};
     int coluna =1;
-
+    
+    printf("*****Desafio Nível Novato****\n");
     printf("  %2s\n",linha_índice);
 
     
@@ -32,7 +33,7 @@ int main() {
             coluna = coluna+ 1;
         }
     
-        printf("\n");
+       
     // Nível Aventureiro - Expansão do Tabuleiro e Posicionamento Diagonal
     // Sugestão: Expanda o tabuleiro para uma matriz 10x10.
     // Sugestão: Posicione quatro navios no tabuleiro, incluindo dois na diagonal.
@@ -42,9 +43,11 @@ int main() {
     char linha_índice_2[10]={'A','B','C','D','E','F','G','H','I','J'};
     int coluna_2 =1;
 
+    printf("\n");
+    printf("*****Desafio Nível Aventureiro****\n");
     printf("   %s\n",linha_índice_2);
 
-    
+        
         for (int i = 0; i < 10; i++) {
             printf("%2d ",coluna_2);
             for (int j = 0; j < 10; j++) {
@@ -74,7 +77,6 @@ int main() {
     // 0 0 1 0 0
     // 0 1 1 1 0
     // 1 1 1 1 1
-    
     // Exemplo para habilidade em octaedro:
     // 0 0 1 0 0
     // 0 1 1 1 0
@@ -85,5 +87,34 @@ int main() {
     // 1 1 1 1 1
     // 0 0 1 0 0
 
+
+    int tabuleiro_mestre[10][10];
+    char linha_índice_3[10]={'A','B','C','D','E','F','G','H','I','J'};
+    int coluna_3 =1;
+
+    printf("\n");
+    printf("*****Desafio Nível Mestre****\n");
+    printf("   %s\n",linha_índice_3);
+
+    
+        for (int i = 0; i < 10; i++) {
+            printf("%2d ",coluna_3);
+            for (int j = 0; j < 10; j++) {
+                if (i==0&& j==2|| i==1&& j>0 && j<4 || i==2 && j<5 || i==3 && j==5 || i==4 && j>3 && j<7 || i==5 && j==5 || i==7 && j==4 || i==8 && j>1 && j<7 || i==9 && j==4 )
+                {
+                    tabuleiro_mestre[i][j] = 1;
+                }
+                else{
+                tabuleiro_mestre[i][j] = 0;  
+                }
+                printf("%d", tabuleiro_mestre[i][j]);
+            }
+            printf("\n");
+            coluna_3 = coluna_3+ 1;
+        }
+    
+
+
+    
     return 0;
 }
